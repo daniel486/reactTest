@@ -25,6 +25,17 @@ class Board extends React.Component {
         }
     }
 
+    /**
+     *  In React is a convention use the names onEvent for the  props that represent events and
+     * handleEvent for the methods that manage some event
+     * */
+   
+    handleClick(i) {
+        const squares = this.state.squares;
+        squares[i] = 'X';
+        this.setState({squares: squares});
+    }
+     
   renderSquare(i) {
     return (
     <Square 
